@@ -31,17 +31,11 @@ public class BlogController {
         return "redirect:/";
     }
 
-//    @GetMapping("/delete")
-//    public String delPost(BlogPost post) throws SQLException{
-//        System.out.print(post.id);
-//        blogRepository.deletePost(post);
-//        return "redirect:/";
-//    }
-        @GetMapping("/delete/{id}")
-        public String delPost(@PathVariable("id") Long id) throws SQLException{
+    @GetMapping("/delete/{id}")
+    public String delPost(@PathVariable("id") Long id) throws SQLException{
 
-            System.out.print(id);
-            blogRepository.deletePost(id);
-            return "redirect:/";
-        }
+        System.out.print(id);
+        blogRepository.deletePost(id);
+        return "redirect:/";
+    }
 }
