@@ -22,8 +22,7 @@
     <div th:each="post : ${posts}">
         <h2 id="title" th:text="${post.title}"></h2>
         <p id="content" th:text="${post.content}"></p>
-        <a th:href="@{/delete/{id}(id = ${post.getId()})}">Usuń</a>
-
+        <a th:href="@{/delete/{id}(id = ${post.id})}">Usuń</a>
     </div>
 </body>
 </html>
